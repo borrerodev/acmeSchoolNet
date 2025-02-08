@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZT32wGKYcdo=",
+  "success": true,
+  "projectFilePath": "/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Application/School.Application.csproj",
+  "expectedPackageFiles": [
+    "/Users/jorgeborrero/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

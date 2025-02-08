@@ -1,0 +1,12 @@
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/bin/Debug/net9.0/School.Domain.deps.json
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/bin/Debug/net9.0/School.Domain.dll
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/bin/Debug/net9.0/School.Domain.pdb
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.AssemblyInfoInputs.cache
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.AssemblyInfo.cs
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.csproj.CoreCompileInputs.cache
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.dll
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/refint/School.Domain.dll
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.pdb
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/ref/School.Domain.dll
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.csproj.AssemblyReference.cache

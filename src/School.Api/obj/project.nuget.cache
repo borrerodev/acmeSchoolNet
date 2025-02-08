@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "pL6isZ0G090=",
+  "success": true,
+  "projectFilePath": "/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Api/School.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/jorgeborrero/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
