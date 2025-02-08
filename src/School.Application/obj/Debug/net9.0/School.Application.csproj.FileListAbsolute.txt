@@ -13,3 +13,4 @@
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Application/bin/Debug/net9.0/School.Domain.pdb
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Application/obj/Debug/net9.0/School.Application.csproj.AssemblyReference.cache
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Application/obj/Debug/net9.0/School.A.0288516A.Up2Date
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Application/obj/Debug/net9.0/School.Application.sourcelink.json

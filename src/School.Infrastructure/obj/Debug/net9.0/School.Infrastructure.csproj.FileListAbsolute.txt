@@ -15,3 +15,6 @@
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/bin/Debug/net9.0/School.Domain.pdb
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/obj/Debug/net9.0/School.Infrastructure.csproj.AssemblyReference.cache
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/obj/Debug/net9.0/School.I.43F417B3.Up2Date
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/bin/Debug/net9.0/School.Infrastructure.runtimeconfig.json
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/obj/Debug/net9.0/School.Infrastructure.sourcelink.json
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/obj/Debug/net9.0/School.Infrastructure.genruntimeconfig.cache

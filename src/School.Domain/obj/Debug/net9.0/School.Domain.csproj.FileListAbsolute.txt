@@ -10,3 +10,4 @@
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.pdb
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/ref/School.Domain.dll
 /Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.csproj.AssemblyReference.cache
+/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Domain/obj/Debug/net9.0/School.Domain.sourcelink.json

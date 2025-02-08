@@ -2,6 +2,7 @@ namespace School.Domain.Entities.Course;
 
 using School.Domain.Abstractions;
 using School.Domain.Entities.Course.Events;
+using School.Domain.Entities.Student;
 
 public sealed class Course : Entity
 {
@@ -9,6 +10,7 @@ public sealed class Course : Entity
     public decimal RegistrationFee { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
+    public ICollection<Student> Students { get; set; } = new List<Student>();
 
     private Course(
         Guid id, 
@@ -23,8 +25,6 @@ public sealed class Course : Entity
         StartDate = startDate;
         EndDate = endDate;
     }
-    //public ICollection<Enrollment> Enrollments { get; set; }
-
     public static Course Create(
         string name, 
         decimal registrationFee, 
