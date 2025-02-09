@@ -17,7 +17,9 @@ public static class DependencyInjection
                 DbLoggerCategory.Database.Command.Name
             }, LogLevel.Information).EnableSensitiveDataLogging();
 
-            options.UseSqlite(configuration.GetConnectionString("SqliteSchoolConnection"));
+            options.UseSqlite(
+                configuration.GetConnectionString("SqliteSchoolConnection")                
+            ).UseSnakeCaseNamingConvention();
         });
         
         return services;
