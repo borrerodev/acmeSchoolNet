@@ -5,10 +5,14 @@ namespace School.Domain.Entities.Student;
 
     public class Student : Entity
     {
-        public string Name { get; private set; }
+        public string? Name { get; private set; }
         public int Age { get; private set; }
         public Guid CourseId { get; set; }
         public School.Domain.Entities.Course.Course? Course { get; set; }
+        public Student()
+        {
+            
+        }
         private Student(Guid id, string name, int age) : base(id)
         {
             Name = name;    

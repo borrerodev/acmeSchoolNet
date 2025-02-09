@@ -7,6 +7,10 @@ public abstract class Entity
     public DateTime CreatedAt { get; init; }
     public DateTime? UpdatedAt { get; init; }
 
+    public Entity()
+    {
+        
+    }
      // Constructor to initialize Id
     protected Entity(Guid id)
     {

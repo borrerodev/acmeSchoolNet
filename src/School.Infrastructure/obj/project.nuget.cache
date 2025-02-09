@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7/zSfCDWoKU=",
+  "dgSpecHash": "UgbqZAOQGcI=",
   "success": true,
   "projectFilePath": "/Users/jorgeborrero/Documents/Documents/NetCore/PruebaAnalyticAlways/School/src/School.Infrastructure/School.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "/Users/jorgeborrero/.nuget/packages/microsoft.codeanalysis.csharp.workspaces/4.8.0/microsoft.codeanalysis.csharp.workspaces.4.8.0.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.codeanalysis.workspaces.common/4.8.0/microsoft.codeanalysis.workspaces.common.4.8.0.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.codeanalysis.workspaces.msbuild/4.8.0/microsoft.codeanalysis.workspaces.msbuild.4.8.0.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/microsoft.data.sqlite/9.0.0-preview.6.24327.4/microsoft.data.sqlite.9.0.0-preview.6.24327.4.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.data.sqlite.core/9.0.0-preview.6.24327.4/microsoft.data.sqlite.core.9.0.0-preview.6.24327.4.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.entityframeworkcore/9.0.0-preview.6.24327.4/microsoft.entityframeworkcore.9.0.0-preview.6.24327.4.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.entityframeworkcore.abstractions/9.0.0-preview.6.24327.4/microsoft.entityframeworkcore.abstractions.9.0.0-preview.6.24327.4.nupkg.sha512",
@@ -37,7 +38,10 @@
     "/Users/jorgeborrero/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/microsoft.win32.systemevents/9.0.0-preview.6.24327.7/microsoft.win32.systemevents.9.0.0-preview.6.24327.7.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/mono.texttemplating/3.0.0-preview-0052-g5d0f76c785/mono.texttemplating.3.0.0-preview-0052-g5d0f76c785.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.8/sqlitepclraw.bundle_e_sqlite3.2.1.8.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/sqlitepclraw.core/2.1.8/sqlitepclraw.core.2.1.8.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.8/sqlitepclraw.lib.e_sqlite3.2.1.8.nupkg.sha512",
+    "/Users/jorgeborrero/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.8/sqlitepclraw.provider.e_sqlite3.2.1.8.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/system.collections.immutable/7.0.0/system.collections.immutable.7.0.0.nupkg.sha512",
     "/Users/jorgeborrero/.nuget/packages/system.composition/7.0.0/system.composition.7.0.0.nupkg.sha512",

@@ -6,8 +6,8 @@ using School.Domain.Entities.Student;
 
 public sealed class Course : Entity
 {
-    public string Name { get; set; }
-    public decimal RegistrationFee { get; set; }
+    public string? Name { get; set; }
+    public decimal? RegistrationFee { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public ICollection<Student> Students { get; set; } = new List<Student>();
@@ -24,6 +24,10 @@ public sealed class Course : Entity
         RegistrationFee = registrationFee;
         StartDate = startDate;
         EndDate = endDate;
+    }
+    public Course()
+    {
+        
     }
     public static Course Create(
         string name, 
