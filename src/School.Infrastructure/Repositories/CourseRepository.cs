@@ -1,7 +1,7 @@
 
 
 using Microsoft.EntityFrameworkCore;
-using School.Domain.Entities.Course;
+using School.Domain.Entities.Courses;
 
 namespace School.Infrastructure.Repositories;
 
@@ -17,7 +17,7 @@ internal sealed class CourseRepository : Repository<Course>, ICourseRepository
     }
     public void EnrollStudent(Guid courseId, Guid studentId, CancellationToken cancellationToken)
     {
-       var course = dbContext.Set<Course>().Include(x => x.Students).FirstOrDefault(x => x.Id == courseId);
+       // var course = dbContext.Set<Course>().Include(x => x.s).FirstOrDefault(x => x.Id == courseId);
     }
 
     public async Task<List<Course>> GetAll(CancellationToken cancellationToken)

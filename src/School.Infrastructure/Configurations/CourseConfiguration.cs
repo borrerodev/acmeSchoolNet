@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using School.Domain.Entities.Course;
+using School.Domain.Entities.Courses;
 
 namespace School.Infrastructure.Configurations;
 internal sealed class CourseConfiguration : IEntityTypeConfiguration<Course>

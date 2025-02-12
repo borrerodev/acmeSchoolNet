@@ -1,4 +1,4 @@
-namespace School.Domain.Entities.Student;
+namespace School.Domain.Entities.Students;
 
 public interface IStudentRepository
 {

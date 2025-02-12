@@ -1,5 +1,5 @@
 
-using School.Domain.Entities.Student;
+using School.Domain.Entities.Students;
 
 namespace School.Infrastructure.Repositories;
 

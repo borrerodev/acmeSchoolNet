@@ -1,8 +1,9 @@
-namespace School.Domain.Entities.Course;
+namespace School.Domain.Entities.Courses;
 
 using School.Domain.Abstractions;
-using School.Domain.Entities.Course.Events;
-using School.Domain.Entities.Student;
+using School.Domain.Entities.Courses.Events;
+using School.Domain.Entities.Enrollments;
+using School.Domain.Entities.Students;
 
 public sealed class Course : Entity
 {
@@ -11,7 +12,8 @@ public sealed class Course : Entity
     public int RegistrationFee { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public ICollection<Student>? Students { get; set; } = new List<Student>();
+    public ICollection<Enrollment>? Enrollments { get; set; }
+    public ICollection<Student> Students { get; set; } = new List<Student>();
 
     private Course(
         Guid id, 

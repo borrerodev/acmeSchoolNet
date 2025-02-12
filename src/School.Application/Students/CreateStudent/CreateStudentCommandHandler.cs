@@ -1,6 +1,6 @@
 using MediatR;
 using School.Domain.Abstractions;
-using School.Domain.Entities.Student;
+using School.Domain.Entities.Students;
 
 namespace School.Application.Students.CreateStudent;
 

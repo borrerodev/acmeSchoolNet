@@ -1,5 +1,5 @@
 using MediatR;
-using School.Domain.Entities.Course;
+using School.Domain.Entities.Courses;
 
 namespace School.Application.Courses.SearchAll;
 

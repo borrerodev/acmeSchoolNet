@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using School.Application.Courses.CreateCourse;
 using School.Application.Courses.SearchAll;
 using School.Application.Courses.SearchCourses;
+using School.Application.Enrollments.NewEnroll;
 
 namespace School.Api.Controllers.Course
 {
@@ -46,12 +47,12 @@ namespace School.Api.Controllers.Course
             return Ok(courseId);
         }
 
-        // [HttpPut("{id}")]
-        // public async Task<IActionResult> EnrollStudent(int id, [FromBody] CourseDto courseDto)
-        // {
-        //     var course = await _courseService.UpdateCourseAsync(id, courseDto);
-        //     return Ok(course);
-        // }
-
+        [HttpPut("enrollStudent")]
+        public async Task<IActionResult> EnrollStudent([FromBody] EnrollRequest request)
+        {
+            var command = new NewEnrollCommand(request.CourseId, request.StudentId);
+            await _sender.Send(command);
+            return Ok();
+        }
     }
 }

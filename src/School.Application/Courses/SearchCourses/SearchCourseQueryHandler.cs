@@ -2,7 +2,7 @@ namespace School.Application.Courses.SearchCourses;
 
 using MediatR;
 using School.Application.Dtos;
-using School.Domain.Entities.Course;
+using School.Domain.Entities.Courses;
 
 public sealed class SearchCourseQueryHandler : IRequestHandler<SearchCourseQuery, List<CourseDto>>
 {

@@ -1,7 +1,7 @@
 namespace School.Application.Courses.SearchAll;
 
 using MediatR;
-using School.Domain.Entities.Course;
+using School.Domain.Entities.Courses;
 
 public sealed class SearchCourseAllQueryHandler : IRequestHandler<SearchCourseAllQuery, List<Course>>
 {

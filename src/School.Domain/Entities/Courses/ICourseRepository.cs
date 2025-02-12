@@ -1,4 +1,4 @@
-namespace School.Domain.Entities.Course;
+namespace School.Domain.Entities.Courses;
 
 public interface ICourseRepository
 {

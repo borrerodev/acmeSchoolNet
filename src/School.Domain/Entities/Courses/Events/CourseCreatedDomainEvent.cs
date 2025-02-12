@@ -1,4 +1,4 @@
-namespace School.Domain.Entities.Course.Events;
+namespace School.Domain.Entities.Courses.Events;
 
 using School.Domain.Abstractions;
 

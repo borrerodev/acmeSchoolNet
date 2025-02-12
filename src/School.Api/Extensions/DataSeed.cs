@@ -1,6 +1,7 @@
 using System.ComponentModel;
-using School.Domain.Entities.Course;
-using School.Domain.Entities.Student;
+using School.Domain.Entities.Courses;
+using School.Domain.Entities.Enrollments;
+using School.Domain.Entities.Students;
 using School.Infrastructure;
 
 namespace School.Api.Extensions
@@ -33,6 +34,23 @@ namespace School.Api.Extensions
                         var student2 = Student.Create("Jane Doe", 20);
                         context.AddRange(new List<Student> { student1, student2 });
                          
+                        await context.SaveChangesAsync();
+                    }
+
+                    if(!context.Set<Enrollment>().Any())
+                    {
+                        var student1 = context.Set<Student>().FirstOrDefault(x => x.Name == "John Doe");
+                        var student2 = context.Set<Student>().FirstOrDefault(x => x.Name == "Jane Doe");
+
+                        var course1 = context.Set<Course>
+                        ().FirstOrDefault(x => x.Name == "Mathematics");
+                        var course2 = context.Set<Course>().FirstOrDefault(x => x.Name == "English");
+
+                        var enrollment1 = Enrollment.Create(student1.Id, course1.Id);
+
+                        var enrollment2 = Enrollment.Create(student2.Id, course2.Id);
+                        context.AddRange(new List<Enrollment> { enrollment1, enrollment2 });
+
                         await context.SaveChangesAsync();
                     }
                 }
