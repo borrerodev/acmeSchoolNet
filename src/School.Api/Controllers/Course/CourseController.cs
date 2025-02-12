@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using School.Application.Courses.CreateCourse;
 using School.Application.Courses.SearchAll;
 using School.Application.Courses.SearchCourses;
 
@@ -37,12 +38,13 @@ namespace School.Api.Controllers.Course
         }
         
 
-        // [HttpPost]
-        // public async Task<IActionResult> CreateCourse([FromBody] CourseDto courseDto)
-        // {
-        //     var course = await _courseService.CreateCourseAsync(courseDto);
-        //     return CreatedAtAction(nameof(GetCourse), new { id = course.Id }, course);
-        // }
+        [HttpPost]
+        public async Task<IActionResult> CreateCourse([FromBody] CourseRequest request)
+        {
+            var command = new CreateCourseCommand(request.Name, request.RegistrationFee, request.StartDate, request.EndDate);
+            var courseId = await _sender.Send(command);
+            return Ok(courseId);
+        }
 
         // [HttpPut("{id}")]
         // public async Task<IActionResult> EnrollStudent(int id, [FromBody] CourseDto courseDto)

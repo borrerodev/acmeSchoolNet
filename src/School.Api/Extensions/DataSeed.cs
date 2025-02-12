@@ -21,7 +21,7 @@ namespace School.Api.Extensions
                     if(!context.Set<Course>().Any())
                     {
                         var courseMath = Course.Create("Mathematics", 1000, DateTime.Now,DateTime.Now);
-                        var courseEnglish = Course.Create("English", 1000, DateTime.Now,DateTime.Now);                                            
+                        var courseEnglish = Course.Create("English", 1000, DateTime.Now,DateTime.Now);                                                                    
                         context.AddRange(new List<Course> { courseEnglish, courseMath });
 
                         await context.SaveChangesAsync();
