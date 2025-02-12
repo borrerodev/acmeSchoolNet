@@ -12,9 +12,9 @@ internal sealed class CourseConfiguration : IEntityTypeConfiguration<Course>
         builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
                
          // Configure the one-to-many relationship
-        builder.HasMany(c => c.Students)
-               .WithOne(s => s.Course)
-               .HasForeignKey(s => s.CourseId)
-               .OnDelete(DeleteBehavior.Cascade);
+        // builder.HasMany(c => c.Students)
+        //        .WithOne(s => s.Course)
+        //        .HasForeignKey(s => s.CourseId)
+        //        .OnDelete(DeleteBehavior.Cascade);
     }
 }

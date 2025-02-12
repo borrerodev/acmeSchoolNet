@@ -20,4 +20,8 @@ internal sealed class CourseRepository : Repository<Course>, ICourseRepository
        var course = dbContext.Set<Course>().Include(x => x.Students).FirstOrDefault(x => x.Id == courseId);
     }
 
+    public async Task<List<Course>> GetAll(CancellationToken cancellationToken)
+    {
+        return await dbContext.Set<Course>().ToListAsync(cancellationToken);
+    }
 }

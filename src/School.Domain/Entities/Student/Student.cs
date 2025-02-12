@@ -8,7 +8,7 @@ namespace School.Domain.Entities.Student;
         public string? Name { get; private set; }
         public int Age { get; private set; }
         public Guid CourseId { get; set; }
-        public School.Domain.Entities.Course.Course? Course { get; set; }
+        
         public Student()
         {
             
@@ -28,8 +28,7 @@ namespace School.Domain.Entities.Student;
         }
 
         public static void AssignCourse(Student student, School.Domain.Entities.Course.Course course)
-        {
-            student.Course = course;
+        {            
             student.CourseId = course.Id;
         }
 
