@@ -31,7 +31,7 @@ namespace School.Api.Extensions
                     if(!context.Set<Student>().Any())
                     {
                         var student1 = Student.Create("John Doe", 19);
-                        var student2 = Student.Create("Jane Doe", 20);
+                        var student2 = Student.Create("Jorge Armando", 20);
                         context.AddRange(new List<Student> { student1, student2 });
                          
                         await context.SaveChangesAsync();
@@ -40,7 +40,7 @@ namespace School.Api.Extensions
                     if(!context.Set<Enrollment>().Any())
                     {
                         var student1 = context.Set<Student>().FirstOrDefault(x => x.Name == "John Doe");
-                        var student2 = context.Set<Student>().FirstOrDefault(x => x.Name == "Jane Doe");
+                        var student2 = context.Set<Student>().FirstOrDefault(x => x.Name == "Jorge Armando");
 
                         var course1 = context.Set<Course>
                         ().FirstOrDefault(x => x.Name == "Mathematics");

@@ -1,7 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using School.Application.Courses.CreateCourse;
-using School.Application.Courses.SearchAll;
 using School.Application.Courses.SearchCourses;
 using School.Application.Enrollments.NewEnroll;
 
@@ -15,14 +14,6 @@ namespace School.Api.Controllers.Course
         public CourseController(ISender sender)
         {
             _sender = sender;
-        }
-
-        //http://localhost:5000/api/Course/all
-        [HttpGet("all")]
-        public async Task<IActionResult> GetCourses()
-        {
-            var courses = await _sender.Send(new SearchCourseAllQuery());
-            return Ok(courses);
         }
 
         //http://localhost:5000/api/Course/startDate=2021-01-01&endDate=2021-12-31

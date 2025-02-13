@@ -4,7 +4,7 @@ using School.Domain.Entities.Courses;
 
 namespace School.Application.Courses.CreateCourse;
 
-internal sealed class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, Guid>
+public sealed class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommand, Guid>
 {
     private readonly ICourseRepository _courseRepository;
     private readonly IUnitOfWork _unitOfWork;   

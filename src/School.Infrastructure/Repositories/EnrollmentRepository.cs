@@ -6,5 +6,6 @@ internal sealed class EnrollmentRepository : Repository<Enrollment>, IEnrollment
 {
     public EnrollmentRepository(SchoolDbContext context) : base(context)
     {
+
     }
 }

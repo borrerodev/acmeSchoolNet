@@ -3,7 +3,7 @@ namespace School.Domain.Abstractions;
 public abstract class Entity
 {
     private readonly List<IDomainEvent> _domainEvents = new();
-    public Guid Id { get; init; }
+    public Guid Id { get; set; }
     public DateTime CreatedAt { get; init; }
     public DateTime? UpdatedAt { get; init; }
 

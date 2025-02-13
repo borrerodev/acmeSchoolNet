@@ -1,6 +1,7 @@
 using MediatR;
 using School.Domain.Abstractions;
 using School.Domain.Entities.Enrollments;
+using School.Domain.Entities.Students;
 
 namespace School.Application.Enrollments.NewEnroll
 {
@@ -8,6 +9,7 @@ namespace School.Application.Enrollments.NewEnroll
     {
         private readonly IEnrollmentRepository _enrollmentRepository;
         private readonly IUnitOfWork _unitOfWork;
+
 
         public NewEnrollCommandHandler(IEnrollmentRepository enrollmentRepository, IUnitOfWork unitOfWork)
         {

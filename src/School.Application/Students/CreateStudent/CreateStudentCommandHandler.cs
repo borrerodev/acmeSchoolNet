@@ -4,7 +4,7 @@ using School.Domain.Entities.Students;
 
 namespace School.Application.Students.CreateStudent;
 
-internal sealed class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, Guid>
+public sealed class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, Guid>
 {
     private readonly IStudentRepository _studentRepository;
     private readonly IUnitOfWork _unitOfWork;   
