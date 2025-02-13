@@ -12,8 +12,7 @@ public sealed class Course : Entity
     public int RegistrationFee { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public ICollection<Enrollment>? Enrollments { get; set; }
-    public ICollection<Student> Students { get; set; } = new List<Student>();
+    public ICollection<Student> Students { get; set; }
 
     private Course(
         Guid id, 

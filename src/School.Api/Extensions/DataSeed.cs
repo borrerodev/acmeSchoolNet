@@ -47,8 +47,11 @@ namespace School.Api.Extensions
                         var course2 = context.Set<Course>().FirstOrDefault(x => x.Name == "English");
 
                         var enrollment1 = Enrollment.Create(student1.Id, course1.Id);
+                        Student.AssignCourse(student1, course1);
 
                         var enrollment2 = Enrollment.Create(student2.Id, course2.Id);
+                        Student.AssignCourse(student2, course2);
+
                         context.AddRange(new List<Enrollment> { enrollment1, enrollment2 });
 
                         await context.SaveChangesAsync();

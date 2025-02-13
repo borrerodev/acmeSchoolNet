@@ -13,6 +13,17 @@ internal sealed class CourseRepository : Repository<Course>, ICourseRepository
     {
         return await dbContext.Set<Course>()
             .Where(x => x.StartDate >= startDate && x.EndDate <= endDate)
+            .Include(x => x.Students)
+            .Select(x => new Course
+            {
+                Id = x.Id,
+                Name = x.Name,
+                RegistrationFee = x.RegistrationFee,
+                StartDate = x.StartDate,
+                EndDate = x.EndDate,
+                Students = x.Students.ToList()
+    
+            })
             .ToListAsync(cancellationToken);
     }
     public void EnrollStudent(Guid courseId, Guid studentId, CancellationToken cancellationToken)

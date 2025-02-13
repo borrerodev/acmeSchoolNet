@@ -9,8 +9,9 @@ public class Student : Entity
 {
     public string? Name { get; private set; }
     public int Age { get; private set; }
-    
-    public ICollection<Enrollment> Enrollments { get; set; }
+     public Guid? CourseId { get; set; } // Foreign key property
+    // public Course? Course { get; set; } 
+    public ICollection<Course> Courses { get; set; } = new List<Course>();
     
     public Student()
     {
@@ -31,7 +32,8 @@ public class Student : Entity
 
     public static void AssignCourse(Student student, Course course)
     {            
-        //student.CourseId = course.Id;
+        student.CourseId = course.Id;
+        student.Courses.Add(course);
     }
 
 }

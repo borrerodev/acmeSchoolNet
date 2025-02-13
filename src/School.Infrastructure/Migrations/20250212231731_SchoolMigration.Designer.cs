@@ -11,7 +11,7 @@ using School.Infrastructure;
 namespace School.Infrastructure.Migrations
 {
     [DbContext(typeof(SchoolDbContext))]
-    [Migration("20250212173232_SchoolMigration")]
+    [Migration("20250212231731_SchoolMigration")]
     partial class SchoolMigration
     {
         /// <inheritdoc />
@@ -19,6 +19,25 @@ namespace School.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.6.24327.4");
+
+            modelBuilder.Entity("CourseStudent", b =>
+                {
+                    b.Property<Guid>("CoursesId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("courses_id");
+
+                    b.Property<Guid>("StudentsId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("students_id");
+
+                    b.HasKey("CoursesId", "StudentsId")
+                        .HasName("pk_course_student");
+
+                    b.HasIndex("StudentsId")
+                        .HasDatabaseName("ix_course_student_students_id");
+
+                    b.ToTable("course_student", (string)null);
+                });
 
             modelBuilder.Entity("School.Domain.Entities.Courses.Course", b =>
                 {
@@ -109,6 +128,10 @@ namespace School.Infrastructure.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
+                    b.Property<Guid?>("CourseId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("course_id");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT")
                         .HasColumnName("created_at");
@@ -129,17 +152,34 @@ namespace School.Infrastructure.Migrations
                     b.ToTable("Student", (string)null);
                 });
 
+            modelBuilder.Entity("CourseStudent", b =>
+                {
+                    b.HasOne("School.Domain.Entities.Courses.Course", null)
+                        .WithMany()
+                        .HasForeignKey("CoursesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_course_student_courses_courses_id");
+
+                    b.HasOne("School.Domain.Entities.Students.Student", null)
+                        .WithMany()
+                        .HasForeignKey("StudentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_course_student_students_students_id");
+                });
+
             modelBuilder.Entity("School.Domain.Entities.Enrollments.Enrollment", b =>
                 {
                     b.HasOne("School.Domain.Entities.Courses.Course", "Course")
-                        .WithMany("Enrollments")
+                        .WithMany()
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_enrollment_course_course_id");
 
                     b.HasOne("School.Domain.Entities.Students.Student", "Student")
-                        .WithMany("Enrollments")
+                        .WithMany()
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
@@ -148,16 +188,6 @@ namespace School.Infrastructure.Migrations
                     b.Navigation("Course");
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("School.Domain.Entities.Courses.Course", b =>
-                {
-                    b.Navigation("Enrollments");
-                });
-
-            modelBuilder.Entity("School.Domain.Entities.Students.Student", b =>
-                {
-                    b.Navigation("Enrollments");
                 });
 #pragma warning restore 612, 618
         }

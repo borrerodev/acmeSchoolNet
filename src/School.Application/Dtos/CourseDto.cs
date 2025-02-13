@@ -1,4 +1,5 @@
 using School.Domain.Entities.Courses;
+using School.Domain.Entities.Students;
 
 namespace School.Application.Dtos;
 
@@ -12,7 +13,8 @@ public static class CourseMapper
             Name: course.Name!,
             RegistrationFee: course.RegistrationFee,
             StartDate: course.StartDate,
-            EndDate: course.EndDate
+            EndDate: course.EndDate,
+            Students: course.Students.ToList()
         );
     }
 }
@@ -22,5 +24,6 @@ public sealed record CourseDto
     string Name,
     int RegistrationFee,
     DateTime StartDate,
-    DateTime EndDate
+    DateTime EndDate,
+    ICollection<Student> Students
 );
