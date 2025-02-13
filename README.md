@@ -1,6 +1,6 @@
 # ACME School
 
-_Proyecto desarrollado en tecnologia .Net Core 9 , implementando arquitecura Limpia(Clean Code) para separacion de logica de negocio y para este caso en particular de la infrastructura, se impl,ento una base de datos Sql Lite para desarrollo que a futuro con las ventajas del Entity Framework se puede enlazar con otras base de datos como SQL, Orale, MySql, etc_
+_Proyecto desarrollado en tecnologia .Net Core 9 , implementando arquitecura Limpia(Clean Arquitecture) para separacion de logica de negocio y para este caso en particular de la infrastructura, se impl,ento una base de datos Sql Lite para desarrollo que a futuro con las ventajas del Entity Framework se puede enlazar con otras base de datos como SQL, Orale, MySql, etc_
 
 - School.Api: En este proyecto tenemos los Controladores, los contenedores de dependncias, ejecutamos las migraciones desde este proyecto y contiene la base de datops local Sqlite que se carga al iniciar el proyecto con datos de pruebas.
 - School.Application: Tenemos el manejo de CQRS, paqra nuestro caso lo dividimos por entidad y creamos los command y los query, tenemos lalidaciones en la que usamos FLuentValidation, los Dto para traferencia de datos.
@@ -53,3 +53,63 @@ _Se usaron las siguientes librerias _
 ## Autor ✒️
 
 * **Jorge Borrero** - *borrerodev* - [borrerodev](https://linkedin.com/in/jborrero)
+
+
+##English version
+# ACME School
+
+Project developed in .Net Core 9 technology, implementing Clean Architecture for separation of business logic and for this particular case of the infrastructure, we implemented a Sql Lite database for development that in the future with the advantages of the Entity Framework can be linked with other databases such as SQL, Oracle, MySQL, etc_.
+
+- School.Api: In this project we have the Controllers, the dependencies containers, we execute the migrations from this project and it contains the local Sqlite database that is loaded when starting the project with test data.
+- School.Application: We have the CQRS management, in our case we divide it by entity and create the commands and queries, we have the validations in which we use FLuentValidation, the Dto for data transfer.
+- School.Infrastructure: We have the topic of persistence with the context, we store the migration history, model configurations.
+- School.Domain: In this project we have the entities, declaration of interfaces and the handling of UnitOfWork to handle the transaction.
+  
+## Getting started 🚀
+
+Download the application and run the School.Api project.
+Enter url : http://localhost:5000/swagger
+
+
+- Register student: (POST) http://localhost:5000/api/Student
+- Register Course: (POST) http://localhost:5000/api/Course
+- List courses with their students in date range: (GET) http://localhost:5000/api/Course/startDate=2021-01-01&endDate=2021-12-31
+- Enroll student to course: (PUT) http://localhost:5000/api/Course/enrollStudent
+
+### Prerequisites 📋
+
+_.Net Core in version 9.0_preview6_.
+
+## Running the tests ⚙️
+
+From the browser you can run the endpoints or there is a file in src/School.Api/School.Api.http having previously installed the REST Client_ extension.
+
+### Analyze the end-to-end tests 🔩
+
+You can run the unit tests in the School.UnitTest project _
+
+
+
+
+## Libraries or Nugets used 🛠️
+
+_The following libraries were used _.
+
+* [Microsoft.EntityFrameworkCore.Design]) - Migration 
+* [FluentValidation.AspNetCore] - Validations in particular the contrl in the request for over 18s
+* [MediatR] - CQRS Management
+* Microsoft.Data.Sqlite] - Library for Sqlite Database
+* EFCore.NamingConventions] - Snake case conventions handling, important for future implementation of a database like Postgres which is keysensitive, basically what it does is to convert the columns to snake conventions (courseId-> course_id).
+* Xunit] - Unit Tests
+* [Moq] - Mock entities for unit tests
+
+
+
+### Questions/answers 📋
+- What I would like to do but I didn't do? - Implement more test cases, validate more requests with fluent validators for different cases (Nulls, text length) and implement events for notifications, additionally add attentivation and authorization.
+- What things did I do but I think it could be improved or would be necessary if implemented? - If implemented it would be necessary the security issue for endpoint consimo.
+- Third party libraries - Of the most important MediatR for CQRS management which gives us an advantage in a distributed environment allowing us to have the commands (Insert, update, delete) to a DB and the Query (Queries) which is lighter on the subject of transactions in another DB reading, XUnit for testing issues and fluentvalidation to validate the age that allows us to control the requests.
+- This project started from scratch, we investigated the implementation of Clean architecture and it took about 1 week with 1h daily work, we investigated the unit tests specifically for CQRS, I received new concepts that I could understand more as the implementation of CQRS, the pattern Unit of Work and the implementation of interfaces for more abstract development.
+## Author ✒️
+
+** **Jorge Borrero** - *borrerodev* - [borrerodev](https://linkedin.com/in/jborrero)
