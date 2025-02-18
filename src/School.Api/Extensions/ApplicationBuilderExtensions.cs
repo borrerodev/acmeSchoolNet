@@ -25,14 +25,5 @@ namespace School.Api.Extensions
 
             }
         }
-
-        // public static void UseSwagger(this IApplicationBuilder app)
-        // {
-        //     app.UseSwagger();
-        //     app.UseSwaggerUI(c =>
-        //     {
-        //         c.SwaggerEndpoint("/swagger/v1/swagger.json", "School API V1");
-        //     });
-        // }
     }
 }
